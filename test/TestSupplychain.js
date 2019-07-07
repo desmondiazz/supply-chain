@@ -76,7 +76,7 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferOne[6], originFarmLatitude, 'Error: Missing or Invalid originFarmLatitude')
         assert.equal(resultBufferOne[7], originFarmLongitude, 'Error: Missing or Invalid originFarmLongitude')
         assert.equal(resultBufferTwo[5], 0, 'Error: Invalid item State')
-        // assert.equal(eventEmitted, true, 'Invalid event emitted')
+        assert.equal(eventEmitted, true, 'Invalid event emitted')
     })    
 
     // 2nd Test
@@ -101,7 +101,7 @@ contract('SupplyChain', function(accounts) {
         // Verify the result set
         assert.equal(resultBufferOne[2], ownerID, 'Error: Missing or Invalid ownerID')
         assert.equal(resultBufferTwo[5], 1, 'Error: Invalid item State')
-        // assert.equal(eventEmitted, true, 'Invalid event emitted')
+        assert.equal(eventEmitted, true, 'Invalid event emitted')
     })    
 
     // 3rd Test
@@ -126,7 +126,7 @@ contract('SupplyChain', function(accounts) {
         // Verify the result set
         assert.equal(resultBufferOne[2], ownerID, 'Error: Missing or Invalid ownerID')
         assert.equal(resultBufferTwo[5], 2, 'Error: Invalid item State')
-        // assert.equal(eventEmitted, true, 'Invalid event emitted')
+        assert.equal(eventEmitted, true, 'Invalid event emitted')
     })    
 
     // 4th Test
@@ -152,7 +152,7 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferOne[2], ownerID, 'Error: Missing or Invalid ownerID')
         assert.equal(resultBufferTwo[5], 3, 'Error: Invalid item State')  
         assert.equal(resultBufferTwo[4], productPrice, 'Invalid Product price')
-        // assert.equal(eventEmitted, true, 'Invalid event emitted')
+        assert.equal(eventEmitted, true, 'Invalid event emitted')
     })    
 
     // 5th Test
@@ -180,7 +180,7 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferOne[2], distributorID, 'Error: Missing or Invalid ownerID')
         assert.equal(resultBufferTwo[5], 4, 'Error: Invalid item State')
         assert.equal(resultBufferTwo[6], distributorID, 'Error: Invalid Distributor id')
-        // assert.equal(eventEmitted, true, 'Invalid event emitted')
+        assert.equal(eventEmitted, true, 'Invalid event emitted')
     })    
 
     // 6th Test
@@ -206,7 +206,7 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferOne[2], distributorID, 'Error: Missing or Invalid ownerID')
         assert.equal(resultBufferTwo[5], 5, 'Error: Invalid item State')
         assert.equal(resultBufferTwo[6], distributorID, 'Error: Invalid Distributor id')
-        // assert.equal(eventEmitted, true, 'Invalid event emitted')      
+        assert.equal(eventEmitted, true, 'Invalid event emitted')      
     })    
 
     // 7th Test
@@ -232,7 +232,7 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferTwo[5], 6, 'Error: Invalid item State')
         assert.equal(resultBufferTwo[6], distributorID, 'Error: Invalid Distributor id')     
         assert.equal(resultBufferTwo[7], retailerID, 'Error: Invalid Retailer id')  
-        // assert.equal(eventEmitted, true, 'Invalid event emitted')   
+        assert.equal(eventEmitted, true, 'Invalid event emitted')   
     })    
 
     // 8th Test
@@ -260,7 +260,7 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferTwo[6], distributorID, 'Error: Invalid Distributor id')     
         assert.equal(resultBufferTwo[7], retailerID, 'Error: Invalid Retailer id')
         assert.equal(resultBufferTwo[8], consumerID, 'Error: Invalid Consumer id')
-        // assert.equal(eventEmitted, true, 'Invalid event emitted')   
+        assert.equal(eventEmitted, true, 'Invalid event emitted')   
     })    
 
     // 9th Test
