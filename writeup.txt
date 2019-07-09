@@ -17,5 +17,5 @@ General writeup
     start ganache cli: ganache-cli    
     Compile contracts: truffle compile
     Test contracts: truffle test
-    Deploy contracts: truffle migrate --rest --network rinkeby
+    Deploy contracts: truffle migrate --reset --network rinkeby
     Run client server and Test Client code: npm run dev 
