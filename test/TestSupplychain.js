@@ -67,6 +67,7 @@ contract('SupplyChain', function(accounts) {
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc)
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
+
         // Verify the result set
         assert.equal(resultBufferOne[0], sku, 'Error: Invalid item SKU')
         assert.equal(resultBufferOne[1], upc, 'Error: Invalid item UPC')
@@ -169,6 +170,10 @@ contract('SupplyChain', function(accounts) {
         })
 
         const buyPrice = web3.utils.toWei('3', "ether")
+
+        // add a distributor
+        await supplyChain.addDistributor(distributorID);
+
         // Mark an item as Sold by calling function buyItem()
         await supplyChain.buyItem(upc,{from:distributorID,value:buyPrice});        
 
@@ -220,6 +225,9 @@ contract('SupplyChain', function(accounts) {
         await supplyChain.Received({}, (err, res) => {
             eventEmitted = true
         })
+
+        // add a retailer
+        await supplyChain.addRetailer(retailerID);
 
         // Mark an item as Sold by calling function buyItem()
         await supplyChain.receiveItem(upc,{from:retailerID});
